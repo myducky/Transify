@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24E7E8D5600CB8FA0FB6D922 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DBAEEEAC5B609AEC28844D /* MenuBarView.swift */; };
+		412DA8D2D74CD6AD98923663 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA50630A0AFE3322AB43D /* SettingsStore.swift */; };
+		5062F49C9EF56A1BB6262F63 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0B61C625601F35EE1C09F /* SettingsView.swift */; };
+		52533F44091C2001FF915CFC /* TransifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E3B5A758CAA38805131EF /* TransifyApp.swift */; };
+		782A781D29BC936AC455B38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F6AF744295395D6EE1A54 /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F4180B32C37FFF2C2A89311 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 075C1120D4F5ADD7A080C8E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDCE8A1B0068EC1A24B1CC6F;
+			remoteInfo = Transify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		105F6AF744295395D6EE1A54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2125EC5622E6BA7DC1459502 /* Transify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Transify.entitlements; sourceTree = "<group>"; };
+		2FE0B61C625601F35EE1C09F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		595B328683439F5231D07122 /* TransifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E8DA50630A0AFE3322AB43D /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		B1DBAEEEAC5B609AEC28844D /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		B50E3B5A758CAA38805131EF /* TransifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransifyApp.swift; sourceTree = "<group>"; };
+		F1E6BC26AFFC97CC11730633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F3AF179C3B8A5A2A65F9457F /* Transify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		348038D02EEF520CA0B0B654 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8E8DA50630A0AFE3322AB43D /* SettingsStore.swift */,
+				2FE0B61C625601F35EE1C09F /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		378265ABECF94612AC9F87CA /* Transify */ = {
+			isa = PBXGroup;
+			children = (
+				105F6AF744295395D6EE1A54 /* AppDelegate.swift */,
+				F1E6BC26AFFC97CC11730633 /* Info.plist */,
+				2125EC5622E6BA7DC1459502 /* Transify.entitlements */,
+				B50E3B5A758CAA38805131EF /* TransifyApp.swift */,
+				348038D02EEF520CA0B0B654 /* Settings */,
+				FEB4A75622D6235A6233CF7D /* UI */,
+			);
+			path = Transify;
+			sourceTree = "<group>";
+		};
+		3BDC588E7DD4BE1E85494819 /* TransifyTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TransifyTests;
+			sourceTree = "<group>";
+		};
+		9A148EC858B9B020C9EBCE16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3AF179C3B8A5A2A65F9457F /* Transify.app */,
+				595B328683439F5231D07122 /* TransifyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBF7B53725CEB42335E20BFC = {
+			isa = PBXGroup;
+			children = (
+				378265ABECF94612AC9F87CA /* Transify */,
+				3BDC588E7DD4BE1E85494819 /* TransifyTests */,
+				9A148EC858B9B020C9EBCE16 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FEB4A75622D6235A6233CF7D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B1DBAEEEAC5B609AEC28844D /* MenuBarView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDCE8A1B0068EC1A24B1CC6F /* Transify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85D05C0A47723BE06A442F28 /* Build configuration list for PBXNativeTarget "Transify" */;
+			buildPhases = (
+				A733194874313E569D34B36C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Transify;
+			packageProductDependencies = (
+			);
+			productName = Transify;
+			productReference = F3AF179C3B8A5A2A65F9457F /* Transify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDCF55A53FEA2BE1AA332B0E /* TransifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0C1CA2634B0CBBA4E6540E /* Build configuration list for PBXNativeTarget "TransifyTests" */;
+			buildPhases = (
+				609485D594F43A660A281926 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97BF50AD19FFDCB9A792C4EA /* PBXTargetDependency */,
+			);
+			name = TransifyTests;
+			packageProductDependencies = (
+			);
+			productName = TransifyTests;
+			productReference = 595B328683439F5231D07122 /* TransifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		075C1120D4F5ADD7A080C8E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 80390C0ED79EFE267CD4DD0F /* Build configuration list for PBXProject "Transify" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = DBF7B53725CEB42335E20BFC;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9A148EC858B9B020C9EBCE16 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDCE8A1B0068EC1A24B1CC6F /* Transify */,
+				EDCF55A53FEA2BE1AA332B0E /* TransifyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		609485D594F43A660A281926 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A733194874313E569D34B36C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				782A781D29BC936AC455B38E /* AppDelegate.swift in Sources */,
+				24E7E8D5600CB8FA0FB6D922 /* MenuBarView.swift in Sources */,
+				412DA8D2D74CD6AD98923663 /* SettingsStore.swift in Sources */,
+				5062F49C9EF56A1BB6262F63 /* SettingsView.swift in Sources */,
+				52533F44091C2001FF915CFC /* TransifyApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97BF50AD19FFDCB9A792C4EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDCE8A1B0068EC1A24B1CC6F /* Transify */;
+			targetProxy = 2F4180B32C37FFF2C2A89311 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		42AA9C9FB729D38040AD1EBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.transify.TransifyTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Transify.app/Contents/MacOS/Transify";
+			};
+			name = Debug;
+		};
+		8F008FD4B547BF34D2AE46BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_ENTITLEMENTS = Transify/Transify.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Transify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.transify.Transify;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		97CD174731C0BC39F83D5591 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		C0CDEDF46BE8EA57DFDC329F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		C6593CCE6B2BAD2DA59069A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_ENTITLEMENTS = Transify/Transify.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Transify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.transify.Transify;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E28F3F01C2ED283C48807B0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.transify.TransifyTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Transify.app/Contents/MacOS/Transify";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80390C0ED79EFE267CD4DD0F /* Build configuration list for PBXProject "Transify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97CD174731C0BC39F83D5591 /* Debug */,
+				C0CDEDF46BE8EA57DFDC329F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		85D05C0A47723BE06A442F28 /* Build configuration list for PBXNativeTarget "Transify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F008FD4B547BF34D2AE46BA /* Debug */,
+				C6593CCE6B2BAD2DA59069A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CA0C1CA2634B0CBBA4E6540E /* Build configuration list for PBXNativeTarget "TransifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42AA9C9FB729D38040AD1EBD /* Debug */,
+				E28F3F01C2ED283C48807B0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 075C1120D4F5ADD7A080C8E4 /* Project object */;
+}
