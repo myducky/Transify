@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		003A810ADC983610EBF8FE3F /* SettingsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE96D028D4B5AD1462D95048 /* SettingsStoreTests.swift */; };
+		21520196B15DB728EC055118 /* LLMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCFC3A6E26EE1CBCF757707 /* LLMClient.swift */; };
 		24E7E8D5600CB8FA0FB6D922 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DBAEEEAC5B609AEC28844D /* MenuBarView.swift */; };
+		3285F058D762E40CA6FF8180 /* LLMClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE18EBDF7E77F850B2FEF5AC /* LLMClientTests.swift */; };
 		412DA8D2D74CD6AD98923663 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA50630A0AFE3322AB43D /* SettingsStore.swift */; };
 		5062F49C9EF56A1BB6262F63 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0B61C625601F35EE1C09F /* SettingsView.swift */; };
 		52533F44091C2001FF915CFC /* TransifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E3B5A758CAA38805131EF /* TransifyApp.swift */; };
 		782A781D29BC936AC455B38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F6AF744295395D6EE1A54 /* AppDelegate.swift */; };
+		F83079612D31CD507501FBF3 /* AccessibilityBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC72FAA1209054FB44A912 /* AccessibilityBridge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,16 +32,28 @@
 		105F6AF744295395D6EE1A54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2125EC5622E6BA7DC1459502 /* Transify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Transify.entitlements; sourceTree = "<group>"; };
 		2FE0B61C625601F35EE1C09F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4BCFC3A6E26EE1CBCF757707 /* LLMClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMClient.swift; sourceTree = "<group>"; };
 		595B328683439F5231D07122 /* TransifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8DA50630A0AFE3322AB43D /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		B1DBAEEEAC5B609AEC28844D /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		B50E3B5A758CAA38805131EF /* TransifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransifyApp.swift; sourceTree = "<group>"; };
 		F1E6BC26AFFC97CC11730633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F3AF179C3B8A5A2A65F9457F /* Transify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4DC72FAA1209054FB44A912 /* AccessibilityBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityBridge.swift; sourceTree = "<group>"; };
+		FE18EBDF7E77F850B2FEF5AC /* LLMClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMClientTests.swift; sourceTree = "<group>"; };
 		FE96D028D4B5AD1462D95048 /* SettingsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		25EA388831775EAC08EA4771 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F4DC72FAA1209054FB44A912 /* AccessibilityBridge.swift */,
+				4BCFC3A6E26EE1CBCF757707 /* LLMClient.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		348038D02EEF520CA0B0B654 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +70,7 @@
 				F1E6BC26AFFC97CC11730633 /* Info.plist */,
 				2125EC5622E6BA7DC1459502 /* Transify.entitlements */,
 				B50E3B5A758CAA38805131EF /* TransifyApp.swift */,
+				25EA388831775EAC08EA4771 /* Core */,
 				348038D02EEF520CA0B0B654 /* Settings */,
 				FEB4A75622D6235A6233CF7D /* UI */,
 			);
@@ -64,6 +80,7 @@
 		3BDC588E7DD4BE1E85494819 /* TransifyTests */ = {
 			isa = PBXGroup;
 			children = (
+				FE18EBDF7E77F850B2FEF5AC /* LLMClientTests.swift */,
 				FE96D028D4B5AD1462D95048 /* SettingsStoreTests.swift */,
 			);
 			path = TransifyTests;
@@ -169,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3285F058D762E40CA6FF8180 /* LLMClientTests.swift in Sources */,
 				003A810ADC983610EBF8FE3F /* SettingsStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,7 +195,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F83079612D31CD507501FBF3 /* AccessibilityBridge.swift in Sources */,
 				782A781D29BC936AC455B38E /* AppDelegate.swift in Sources */,
+				21520196B15DB728EC055118 /* LLMClient.swift in Sources */,
 				24E7E8D5600CB8FA0FB6D922 /* MenuBarView.swift in Sources */,
 				412DA8D2D74CD6AD98923663 /* SettingsStore.swift in Sources */,
 				5062F49C9EF56A1BB6262F63 /* SettingsView.swift in Sources */,
