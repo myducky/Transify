@@ -16,7 +16,9 @@
 		52533F44091C2001FF915CFC /* TransifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E3B5A758CAA38805131EF /* TransifyApp.swift */; };
 		782A781D29BC936AC455B38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F6AF744295395D6EE1A54 /* AppDelegate.swift */; };
 		D68A49253F4839D128016F95 /* TranslationUndoManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE41DD675F06796B6023607 /* TranslationUndoManagerTests.swift */; };
+		EA2B7046F298E510910A8383 /* TranslationCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4AF16AFADACA88D6BD3F2 /* TranslationCore.swift */; };
 		F83079612D31CD507501FBF3 /* AccessibilityBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC72FAA1209054FB44A912 /* AccessibilityBridge.swift */; };
+		FD2AC89C32BC3ED5B0F03FD6 /* TranslationCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484EBB69E635960E21D7327 /* TranslationCoreTests.swift */; };
 		FF03D1B1F915941A8062C0B4 /* TranslationUndoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1482D510E5071F62C703380 /* TranslationUndoManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,8 +38,10 @@
 		2FE0B61C625601F35EE1C09F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4BCFC3A6E26EE1CBCF757707 /* LLMClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMClient.swift; sourceTree = "<group>"; };
 		595B328683439F5231D07122 /* TransifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62E4AF16AFADACA88D6BD3F2 /* TranslationCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationCore.swift; sourceTree = "<group>"; };
 		8AE41DD675F06796B6023607 /* TranslationUndoManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationUndoManagerTests.swift; sourceTree = "<group>"; };
 		8E8DA50630A0AFE3322AB43D /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		A484EBB69E635960E21D7327 /* TranslationCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationCoreTests.swift; sourceTree = "<group>"; };
 		B1482D510E5071F62C703380 /* TranslationUndoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationUndoManager.swift; sourceTree = "<group>"; };
 		B1DBAEEEAC5B609AEC28844D /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		B50E3B5A758CAA38805131EF /* TransifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransifyApp.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			children = (
 				F4DC72FAA1209054FB44A912 /* AccessibilityBridge.swift */,
 				4BCFC3A6E26EE1CBCF757707 /* LLMClient.swift */,
+				62E4AF16AFADACA88D6BD3F2 /* TranslationCore.swift */,
 				B1482D510E5071F62C703380 /* TranslationUndoManager.swift */,
 			);
 			path = Core;
@@ -87,6 +92,7 @@
 			children = (
 				FE18EBDF7E77F850B2FEF5AC /* LLMClientTests.swift */,
 				FE96D028D4B5AD1462D95048 /* SettingsStoreTests.swift */,
+				A484EBB69E635960E21D7327 /* TranslationCoreTests.swift */,
 				8AE41DD675F06796B6023607 /* TranslationUndoManagerTests.swift */,
 			);
 			path = TransifyTests;
@@ -194,6 +200,7 @@
 			files = (
 				3285F058D762E40CA6FF8180 /* LLMClientTests.swift in Sources */,
 				003A810ADC983610EBF8FE3F /* SettingsStoreTests.swift in Sources */,
+				FD2AC89C32BC3ED5B0F03FD6 /* TranslationCoreTests.swift in Sources */,
 				D68A49253F4839D128016F95 /* TranslationUndoManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +216,7 @@
 				412DA8D2D74CD6AD98923663 /* SettingsStore.swift in Sources */,
 				5062F49C9EF56A1BB6262F63 /* SettingsView.swift in Sources */,
 				52533F44091C2001FF915CFC /* TransifyApp.swift in Sources */,
+				EA2B7046F298E510910A8383 /* TranslationCore.swift in Sources */,
 				FF03D1B1F915941A8062C0B4 /* TranslationUndoManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
