@@ -15,7 +15,7 @@ targets:
       INFOPLIST_FILE: Transify/Info.plist
       CODE_SIGN_ENTITLEMENTS: Transify/Transify.entitlements
       CODE_SIGN_IDENTITY: "-"
-      CODE_SIGNING_REQUIRED: "NO"
+      CODE_SIGNING_REQUIRED: "YES"
   TransifyTests:
     type: bundle.unit-test
     platform: macOS
