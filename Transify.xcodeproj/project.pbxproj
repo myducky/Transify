@@ -11,6 +11,7 @@
 		21520196B15DB728EC055118 /* LLMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCFC3A6E26EE1CBCF757707 /* LLMClient.swift */; };
 		24E7E8D5600CB8FA0FB6D922 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DBAEEEAC5B609AEC28844D /* MenuBarView.swift */; };
 		3285F058D762E40CA6FF8180 /* LLMClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE18EBDF7E77F850B2FEF5AC /* LLMClientTests.swift */; };
+		33B411A5E47CDF13E364BB9E /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7470E9AA4EBC8E0125175 /* EventMonitor.swift */; };
 		412DA8D2D74CD6AD98923663 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA50630A0AFE3322AB43D /* SettingsStore.swift */; };
 		5062F49C9EF56A1BB6262F63 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0B61C625601F35EE1C09F /* SettingsView.swift */; };
 		52533F44091C2001FF915CFC /* TransifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E3B5A758CAA38805131EF /* TransifyApp.swift */; };
@@ -41,6 +42,7 @@
 		62E4AF16AFADACA88D6BD3F2 /* TranslationCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationCore.swift; sourceTree = "<group>"; };
 		8AE41DD675F06796B6023607 /* TranslationUndoManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationUndoManagerTests.swift; sourceTree = "<group>"; };
 		8E8DA50630A0AFE3322AB43D /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		95B7470E9AA4EBC8E0125175 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		A484EBB69E635960E21D7327 /* TranslationCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationCoreTests.swift; sourceTree = "<group>"; };
 		B1482D510E5071F62C703380 /* TranslationUndoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationUndoManager.swift; sourceTree = "<group>"; };
 		B1DBAEEEAC5B609AEC28844D /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				F4DC72FAA1209054FB44A912 /* AccessibilityBridge.swift */,
+				95B7470E9AA4EBC8E0125175 /* EventMonitor.swift */,
 				4BCFC3A6E26EE1CBCF757707 /* LLMClient.swift */,
 				62E4AF16AFADACA88D6BD3F2 /* TranslationCore.swift */,
 				B1482D510E5071F62C703380 /* TranslationUndoManager.swift */,
@@ -211,6 +214,7 @@
 			files = (
 				F83079612D31CD507501FBF3 /* AccessibilityBridge.swift in Sources */,
 				782A781D29BC936AC455B38E /* AppDelegate.swift in Sources */,
+				33B411A5E47CDF13E364BB9E /* EventMonitor.swift in Sources */,
 				21520196B15DB728EC055118 /* LLMClient.swift in Sources */,
 				24E7E8D5600CB8FA0FB6D922 /* MenuBarView.swift in Sources */,
 				412DA8D2D74CD6AD98923663 /* SettingsStore.swift in Sources */,
