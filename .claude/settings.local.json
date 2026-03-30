@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(brew install:*)",
+      "Bash(xcodegen generate:*)",
+      "Bash(xcodebuild build:*)",
+      "Bash(swiftc:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git:*)",
+      "Bash(sudo xcodebuild:*)",
+      "Bash(sudo -S xcodebuild -license accept)",
+      "Bash(export XCODE_SKIP_XCODEBUILD_LICENSE_AGREEMENT=YES)",
+      "Bash(GIT_TRACE=1 /usr/bin/git config user.email \"dev@transify.local\" 2>&1)",
+      "Bash(bash -c \"git add project.yml Transify/Transify.entitlements Transify.xcodeproj && git commit -m 'fix: ad-hoc signing enabled, add network client entitlement'\" 2>&1)",
+      "Bash(xcodebuild test:*)"
+    ]
+  }
+}
