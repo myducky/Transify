@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		003A810ADC983610EBF8FE3F /* SettingsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE96D028D4B5AD1462D95048 /* SettingsStoreTests.swift */; };
 		24E7E8D5600CB8FA0FB6D922 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DBAEEEAC5B609AEC28844D /* MenuBarView.swift */; };
 		412DA8D2D74CD6AD98923663 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA50630A0AFE3322AB43D /* SettingsStore.swift */; };
 		5062F49C9EF56A1BB6262F63 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0B61C625601F35EE1C09F /* SettingsView.swift */; };
@@ -34,6 +35,7 @@
 		B50E3B5A758CAA38805131EF /* TransifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransifyApp.swift; sourceTree = "<group>"; };
 		F1E6BC26AFFC97CC11730633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F3AF179C3B8A5A2A65F9457F /* Transify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE96D028D4B5AD1462D95048 /* SettingsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -62,6 +64,7 @@
 		3BDC588E7DD4BE1E85494819 /* TransifyTests */ = {
 			isa = PBXGroup;
 			children = (
+				FE96D028D4B5AD1462D95048 /* SettingsStoreTests.swift */,
 			);
 			path = TransifyTests;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				003A810ADC983610EBF8FE3F /* SettingsStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +200,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_REQUIRED = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -367,7 +374,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_REQUIRED = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

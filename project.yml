@@ -22,3 +22,8 @@ targets:
     sources: [TransifyTests]
     dependencies:
       - target: Transify
+    settings:
+      GENERATE_INFOPLIST_FILE: "YES"
+      PRODUCT_BUNDLE_IDENTIFIER: com.transify.TransifyTests
+      CODE_SIGN_IDENTITY: "-"
+      CODE_SIGNING_REQUIRED: "YES"
