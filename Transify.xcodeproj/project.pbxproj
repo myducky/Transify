@@ -16,6 +16,7 @@
 		5062F49C9EF56A1BB6262F63 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0B61C625601F35EE1C09F /* SettingsView.swift */; };
 		52533F44091C2001FF915CFC /* TransifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E3B5A758CAA38805131EF /* TransifyApp.swift */; };
 		782A781D29BC936AC455B38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F6AF744295395D6EE1A54 /* AppDelegate.swift */; };
+		8CEB98E87F8853BFB011D42E /* TranslationPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B9FB5859AC401522332AB /* TranslationPopup.swift */; };
 		D68A49253F4839D128016F95 /* TranslationUndoManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE41DD675F06796B6023607 /* TranslationUndoManagerTests.swift */; };
 		EA2B7046F298E510910A8383 /* TranslationCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4AF16AFADACA88D6BD3F2 /* TranslationCore.swift */; };
 		F83079612D31CD507501FBF3 /* AccessibilityBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC72FAA1209054FB44A912 /* AccessibilityBridge.swift */; };
@@ -38,6 +39,7 @@
 		2125EC5622E6BA7DC1459502 /* Transify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Transify.entitlements; sourceTree = "<group>"; };
 		2FE0B61C625601F35EE1C09F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4BCFC3A6E26EE1CBCF757707 /* LLMClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMClient.swift; sourceTree = "<group>"; };
+		4C8B9FB5859AC401522332AB /* TranslationPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationPopup.swift; sourceTree = "<group>"; };
 		595B328683439F5231D07122 /* TransifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E4AF16AFADACA88D6BD3F2 /* TranslationCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationCore.swift; sourceTree = "<group>"; };
 		8AE41DD675F06796B6023607 /* TranslationUndoManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationUndoManagerTests.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				B1DBAEEEAC5B609AEC28844D /* MenuBarView.swift */,
+				4C8B9FB5859AC401522332AB /* TranslationPopup.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				5062F49C9EF56A1BB6262F63 /* SettingsView.swift in Sources */,
 				52533F44091C2001FF915CFC /* TransifyApp.swift in Sources */,
 				EA2B7046F298E510910A8383 /* TranslationCore.swift in Sources */,
+				8CEB98E87F8853BFB011D42E /* TranslationPopup.swift in Sources */,
 				FF03D1B1F915941A8062C0B4 /* TranslationUndoManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
