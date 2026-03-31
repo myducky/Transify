@@ -39,11 +39,12 @@ class EventMonitor {
             userInfo: Unmanaged.passRetained(self).toOpaque()
         )
         guard let tap = eventTap else {
-            print("EventMonitor: Failed to create event tap — check Accessibility permission")
+            print("❌ EventMonitor: Failed to create event tap — AXIsProcessTrusted=\(AXIsProcessTrusted())")
             return
         }
+        print("✅ EventMonitor: event tap created, keyCode=\(hotkeyKeyCode) modifiers=\(hotkeyModifiers.rawValue)")
         runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, tap, 0)
-        CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, .commonModes)
+        CFRunLoopAddSource(CFRunLoopGetMain(), runLoopSource, .commonModes)
         CGEvent.tapEnable(tap: tap, enable: true)
     }
 
@@ -60,6 +61,7 @@ class EventMonitor {
         let flags = event.flags.intersection([.maskAlternate, .maskCommand, .maskControl, .maskShift])
 
         if keyCode == hotkeyKeyCode && flags == hotkeyModifiers.intersection([.maskAlternate, .maskCommand, .maskControl, .maskShift]) {
+            print("✅ Hotkey matched! Triggering translation.")
             DispatchQueue.main.async { self.onHotkeyPressed?() }
             return nil
         }

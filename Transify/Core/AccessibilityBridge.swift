@@ -8,6 +8,7 @@ struct TextSelection {
     let element: AXUIElement
     let range: CFRange
     let fullText: String
+    var isClipboardFallback: Bool = false
 }
 
 class AccessibilityBridge {
@@ -43,6 +44,48 @@ class AccessibilityBridge {
         }
 
         return TextSelection(text: selectedText, isEditable: isEditable, element: element, range: cfRange, fullText: fullText)
+    }
+
+    /// Fallback for apps that don't expose AX text (e.g. Electron-based apps like Feishu).
+    /// Simulates Cmd+C, reads clipboard, and checks AX editability of the focused element.
+    func readSelectionViaClipboard() async -> TextSelection? {
+        let pasteboard = NSPasteboard.general
+        let oldChangeCount = pasteboard.changeCount
+
+        // Simulate Cmd+C
+        let src = CGEventSource(stateID: .hidSystemState)
+        let keyDown = CGEvent(keyboardEventSource: src, virtualKey: 0x08, keyDown: true)
+        let keyUp   = CGEvent(keyboardEventSource: src, virtualKey: 0x08, keyDown: false)
+        keyDown?.flags = .maskCommand
+        keyUp?.flags   = .maskCommand
+        keyDown?.post(tap: .cgSessionEventTap)
+        keyUp?.post(tap: .cgSessionEventTap)
+
+        // Wait for clipboard to update
+        try? await Task.sleep(nanoseconds: 200_000_000)
+
+        guard pasteboard.changeCount != oldChangeCount,
+              let text = pasteboard.string(forType: .string),
+              !text.isEmpty else { return nil }
+
+        // Check if the focused element is editable via AX (even if it doesn't expose text selection)
+        let systemElement = AXUIElementCreateSystemWide()
+        var focusedRaw: AnyObject?
+        var isEditable = false
+        var axElement = AXUIElementCreateSystemWide()
+        if AXUIElementCopyAttributeValue(systemElement, kAXFocusedUIElementAttribute as CFString, &focusedRaw) == .success,
+           let element = focusedRaw as! AXUIElement? {
+            axElement = element
+            var settable: DarwinBoolean = false
+            if AXUIElementIsAttributeSettable(element, kAXValueAttribute as CFString, &settable) == .success {
+                isEditable = settable.boolValue
+            }
+        }
+
+        return TextSelection(text: text, isEditable: isEditable,
+                             element: axElement,
+                             range: CFRange(location: 0, length: 0), fullText: "",
+                             isClipboardFallback: true)
     }
 
     @discardableResult

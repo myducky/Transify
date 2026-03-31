@@ -1,0 +1,14 @@
+.DS_Store
+
+# Xcode user data
+xcuserdata/
+*.xcuserstate
+Transify.xcodeproj/project.xcworkspace/xcuserdata/
+Transify.xcodeproj/xcuserdata/
+
+# Local build artifacts
+DerivedData/
+build/
+
+# Local tool configuration
+.claude/settings.local.json

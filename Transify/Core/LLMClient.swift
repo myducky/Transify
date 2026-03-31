@@ -18,7 +18,11 @@ enum LLMError: Error, LocalizedError {
 class LLMClient {
     private let session: URLSession
 
-    init(session: URLSession = .shared) {
+    init(session: URLSession = {
+        let config = URLSessionConfiguration.default
+        config.timeoutIntervalForRequest = 15
+        return URLSession(configuration: config)
+    }()) {
         self.session = session
     }
 
@@ -38,6 +42,7 @@ class LLMClient {
         case .google:    return try buildGeminiRequest(model: model, apiKey: apiKey, prompt: prompt)
         case .openai:    return try buildOpenAIRequest(model: model, apiKey: apiKey, prompt: prompt)
         case .anthropic: return try buildAnthropicRequest(model: model, apiKey: apiKey, prompt: prompt)
+        case .bailian:   return try buildBailianRequest(model: model, apiKey: apiKey, prompt: prompt)
         }
     }
 
@@ -46,6 +51,7 @@ class LLMClient {
         case .google:    return try parseGeminiResponse(data: data)
         case .openai:    return try parseOpenAIResponse(data: data)
         case .anthropic: return try parseAnthropicResponse(data: data)
+        case .bailian:   return try parseOpenAIResponse(data: data)
         }
     }
 
@@ -81,6 +87,19 @@ class LLMClient {
         req.httpBody = try JSONSerialization.data(withJSONObject: [
             "model": model.rawValue,
             "max_tokens": 1024,
+            "messages": [["role": "user", "content": prompt]]
+        ])
+        return req
+    }
+
+    private func buildBailianRequest(model: LLMModel, apiKey: String, prompt: String) throws -> URLRequest {
+        let url = URL(string: "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions")!
+        var req = URLRequest(url: url)
+        req.httpMethod = "POST"
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        req.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
+        req.httpBody = try JSONSerialization.data(withJSONObject: [
+            "model": model.rawValue,
             "messages": [["role": "user", "content": prompt]]
         ])
         return req

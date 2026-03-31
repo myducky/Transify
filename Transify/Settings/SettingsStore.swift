@@ -9,6 +9,9 @@ enum LLMModel: String, CaseIterable, Identifiable {
     case claudeSonnet = "claude-sonnet-4-6"
     case gpt4oMini    = "gpt-4o-mini"
     case gpt4o        = "gpt-4o"
+    case qwenTurbo    = "qwen-turbo"
+    case qwenPlus     = "qwen-plus"
+    case qwenMax      = "qwen-max"
 
     var id: String { rawValue }
 
@@ -17,6 +20,7 @@ enum LLMModel: String, CaseIterable, Identifiable {
         case .geminiFlash, .geminiPro:       return .google
         case .claudeHaiku, .claudeSonnet:    return .anthropic
         case .gpt4oMini, .gpt4o:             return .openai
+        case .qwenTurbo, .qwenPlus, .qwenMax: return .bailian
         }
     }
 
@@ -28,18 +32,22 @@ enum LLMModel: String, CaseIterable, Identifiable {
         case .claudeSonnet: return "Claude Sonnet"
         case .gpt4oMini:    return "GPT-4o Mini"
         case .gpt4o:        return "GPT-4o"
+        case .qwenTurbo:    return "百炼 Qwen Turbo"
+        case .qwenPlus:     return "百炼 Qwen Plus"
+        case .qwenMax:      return "百炼 Qwen Max"
         }
     }
 }
 
 enum LLMProvider: String {
-    case google, anthropic, openai
+    case google, anthropic, openai, bailian
 
     var displayName: String {
         switch self {
         case .google:    return "Google"
         case .anthropic: return "Anthropic"
         case .openai:    return "OpenAI"
+        case .bailian:   return "百炼"
         }
     }
 }
@@ -70,43 +78,23 @@ class SettingsStore: ObservableObject {
 
         self.targetLanguage  = defaults.string(forKey: "targetLanguage") ?? "zh"
         self.hotkeyKeyCode   = defaults.object(forKey: "hotkeyKeyCode")   == nil ? 17   : defaults.integer(forKey: "hotkeyKeyCode")
-        self.hotkeyModifiers = defaults.object(forKey: "hotkeyModifiers") == nil ? 2048 : defaults.integer(forKey: "hotkeyModifiers")
+        let storedModifiers  = defaults.object(forKey: "hotkeyModifiers") == nil ? 524288 : defaults.integer(forKey: "hotkeyModifiers")
+        self.hotkeyModifiers = storedModifiers == 2048 ? 524288 : storedModifiers
         self.launchAtLogin   = defaults.bool(forKey: "launchAtLogin")
 
         let modelRaw = defaults.string(forKey: "selectedModel") ?? LLMModel.geminiFlash.rawValue
         self.selectedModel = LLMModel(rawValue: modelRaw) ?? .geminiFlash
     }
 
-    // MARK: - Keychain
+    // MARK: - API Keys (UserDefaults, migrate to Keychain after proper code signing)
 
     func apiKey(for provider: LLMProvider) -> String? {
-        let query: [String: Any] = [
-            kSecClass as String:       kSecClassGenericPassword,
-            kSecAttrAccount as String: "transify-\(provider.rawValue)",
-            kSecReturnData as String:  true
-        ]
-        var result: AnyObject?
-        guard SecItemCopyMatching(query as CFDictionary, &result) == errSecSuccess,
-              let data = result as? Data else { return nil }
-        return String(data: data, encoding: .utf8)
+        let value = defaults.string(forKey: "apiKey-\(provider.rawValue)")
+        return value?.isEmpty == false ? value : nil
     }
 
     func setApiKey(_ key: String, for provider: LLMProvider) {
-        let account = "transify-\(provider.rawValue)"
-        let data = key.data(using: .utf8)!
-
-        let deleteQuery: [String: Any] = [
-            kSecClass as String:       kSecClassGenericPassword,
-            kSecAttrAccount as String: account
-        ]
-        SecItemDelete(deleteQuery as CFDictionary)
-
-        let addQuery: [String: Any] = [
-            kSecClass as String:       kSecClassGenericPassword,
-            kSecAttrAccount as String: account,
-            kSecValueData as String:   data
-        ]
-        SecItemAdd(addQuery as CFDictionary, nil)
+        defaults.set(key, forKey: "apiKey-\(provider.rawValue)")
     }
 }
 

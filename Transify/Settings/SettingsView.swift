@@ -6,9 +6,13 @@ struct SettingsView: View {
     @State private var googleKey     = ""
     @State private var anthropicKey  = ""
     @State private var openaiKey     = ""
+    @State private var bailianKey    = ""
     @State private var showGoogleKey    = false
     @State private var showAnthropicKey = false
     @State private var showOpenAIKey    = false
+    @State private var showBailianKey   = false
+
+    @State private var savedProvider: LLMProvider? = nil
 
     var body: some View {
         Form {
@@ -28,6 +32,7 @@ struct SettingsView: View {
                 apiKeyField(label: "Google",    binding: $googleKey,    show: $showGoogleKey,    provider: .google)
                 apiKeyField(label: "Anthropic", binding: $anthropicKey, show: $showAnthropicKey, provider: .anthropic)
                 apiKeyField(label: "OpenAI",    binding: $openaiKey,    show: $showOpenAIKey,    provider: .openai)
+                apiKeyField(label: "百炼",       binding: $bailianKey,   show: $showBailianKey,   provider: .bailian)
             }
             Section("通用") {
                 Toggle("开机自启", isOn: $settings.launchAtLogin)
@@ -45,16 +50,31 @@ struct SettingsView: View {
     private func apiKeyField(label: String, binding: Binding<String>, show: Binding<Bool>, provider: LLMProvider) -> some View {
         HStack {
             Text(label).frame(width: 80, alignment: .leading)
-            if show.wrappedValue {
-                TextField("API Key", text: binding).textFieldStyle(.roundedBorder)
-            } else {
-                SecureField("API Key", text: binding).textFieldStyle(.roundedBorder)
-            }
+            TextField("API Key", text: binding)
+                .textFieldStyle(.roundedBorder)
+                .opacity(show.wrappedValue ? 1 : 0.01)
+                .overlay(
+                    Group {
+                        if !show.wrappedValue && !binding.wrappedValue.isEmpty {
+                            Text(String(repeating: "•", count: min(binding.wrappedValue.count, 20)))
+                                .foregroundStyle(.secondary)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal, 6)
+                        }
+                    }
+                )
             Button(show.wrappedValue ? "隐藏" : "显示") { show.wrappedValue.toggle() }
                 .buttonStyle(.borderless)
-            Button("保存") { settings.setApiKey(binding.wrappedValue, for: provider) }
-                .buttonStyle(.bordered)
-                .disabled(binding.wrappedValue.isEmpty)
+            Button(savedProvider == provider ? "✓ 已保存" : "保存") {
+                settings.setApiKey(binding.wrappedValue, for: provider)
+                savedProvider = provider
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    if savedProvider == provider { savedProvider = nil }
+                }
+            }
+            .buttonStyle(.bordered)
+            .tint(savedProvider == provider ? .green : nil)
+            .disabled(binding.wrappedValue.isEmpty)
         }
     }
 
@@ -62,5 +82,6 @@ struct SettingsView: View {
         googleKey    = settings.apiKey(for: .google)    ?? ""
         anthropicKey = settings.apiKey(for: .anthropic) ?? ""
         openaiKey    = settings.apiKey(for: .openai)    ?? ""
+        bailianKey   = settings.apiKey(for: .bailian)   ?? ""
     }
 }

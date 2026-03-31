@@ -10,10 +10,5 @@ struct TransifyApp: App {
                 .environmentObject(appDelegate.settingsStore)
         }
         .menuBarExtraStyle(.window)
-
-        Settings {
-            SettingsView()
-                .environmentObject(appDelegate.settingsStore)
-        }
     }
 }

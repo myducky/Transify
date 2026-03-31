@@ -17,6 +17,7 @@
 		52533F44091C2001FF915CFC /* TransifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E3B5A758CAA38805131EF /* TransifyApp.swift */; };
 		782A781D29BC936AC455B38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F6AF744295395D6EE1A54 /* AppDelegate.swift */; };
 		8CEB98E87F8853BFB011D42E /* TranslationPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B9FB5859AC401522332AB /* TranslationPopup.swift */; };
+		BE63A7AA85C6EB7AE23FA0EA /* SettingsWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C567796A337FA4027D19D /* SettingsWindowManager.swift */; };
 		D68A49253F4839D128016F95 /* TranslationUndoManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE41DD675F06796B6023607 /* TranslationUndoManagerTests.swift */; };
 		EA2B7046F298E510910A8383 /* TranslationCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4AF16AFADACA88D6BD3F2 /* TranslationCore.swift */; };
 		F83079612D31CD507501FBF3 /* AccessibilityBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC72FAA1209054FB44A912 /* AccessibilityBridge.swift */; };
@@ -42,6 +43,7 @@
 		4C8B9FB5859AC401522332AB /* TranslationPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationPopup.swift; sourceTree = "<group>"; };
 		595B328683439F5231D07122 /* TransifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E4AF16AFADACA88D6BD3F2 /* TranslationCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationCore.swift; sourceTree = "<group>"; };
+		720C567796A337FA4027D19D /* SettingsWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindowManager.swift; sourceTree = "<group>"; };
 		8AE41DD675F06796B6023607 /* TranslationUndoManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationUndoManagerTests.swift; sourceTree = "<group>"; };
 		8E8DA50630A0AFE3322AB43D /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		95B7470E9AA4EBC8E0125175 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				8E8DA50630A0AFE3322AB43D /* SettingsStore.swift */,
 				2FE0B61C625601F35EE1C09F /* SettingsView.swift */,
+				720C567796A337FA4027D19D /* SettingsWindowManager.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				24E7E8D5600CB8FA0FB6D922 /* MenuBarView.swift in Sources */,
 				412DA8D2D74CD6AD98923663 /* SettingsStore.swift in Sources */,
 				5062F49C9EF56A1BB6262F63 /* SettingsView.swift in Sources */,
+				BE63A7AA85C6EB7AE23FA0EA /* SettingsWindowManager.swift in Sources */,
 				52533F44091C2001FF915CFC /* TransifyApp.swift in Sources */,
 				EA2B7046F298E510910A8383 /* TranslationCore.swift in Sources */,
 				8CEB98E87F8853BFB011D42E /* TranslationPopup.swift in Sources */,

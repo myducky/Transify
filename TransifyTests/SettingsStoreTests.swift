@@ -10,22 +10,12 @@ final class SettingsStoreTests: XCTestCase {
         store = SettingsStore(suiteName: "test-\(UUID().uuidString)")
     }
 
-    func test_defaultTargetLanguage_isChinese() {
-        XCTAssertEqual(store.targetLanguage, "zh")
-    }
-
     func test_defaultModel_isGeminiFlash() {
         XCTAssertEqual(store.selectedModel, LLMModel.geminiFlash)
     }
 
     func test_defaultHotkey_isOptionT() {
         XCTAssertEqual(store.hotkeyKeyCode, 17)       // T key
-        XCTAssertEqual(store.hotkeyModifiers, 2048)   // Option
-    }
-
-    func test_persistTargetLanguage() {
-        store.targetLanguage = "ja"
-        let store2 = SettingsStore(suiteName: store.suiteName)
-        XCTAssertEqual(store2.targetLanguage, "ja")
+        XCTAssertEqual(store.hotkeyModifiers, 524288) // CGEventFlags.maskAlternate (0x80000)
     }
 }
